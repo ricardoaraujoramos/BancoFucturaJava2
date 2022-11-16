@@ -23,17 +23,22 @@ public class Conta {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "id_conta", nullable = false)
 	private int id_conta;
+	
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, targetEntity = User.class)
 	@JoinColumn(name = "ID_USUARIO", nullable = false, referencedColumnName = "id_usuario")
 	private User nome;
+	
 	@Column
 	private String tipoConta;
+	
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, targetEntity = InfBank.class)
 	@JoinColumn(name = "NOME_BANCO", nullable = false, referencedColumnName = "id_banco")
 	private InfBank nomeBanco;
+	
 	@Temporal(TemporalType.DATE)
 	@Column
 	private Calendar dataAberturaConta;
+	
 	@Column(name = "NUM_CONTA", nullable = false, unique = true)
 	private int numConta;
 	@Column
