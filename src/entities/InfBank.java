@@ -17,12 +17,16 @@ public class InfBank {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column
 	private int id_banco;
+	
 	@Column
 	private String nomebanco;
+	
 	@Column(name = "CNPJ", nullable = false, unique = true)
 	private String cnpj;
+	
 	@Column
 	private String email;
+	
 	@Column
 	private String enderecoBanco;
 
