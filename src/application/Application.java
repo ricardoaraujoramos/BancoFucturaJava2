@@ -18,11 +18,11 @@ public class Application {
 		Calendar calendar = Calendar.getInstance();
 		calendar.set(2021, 5, 19);
 		conta.setDataAberturaConta(calendar);
-		conta.setNome(new User("Alexandre Lindo", "10398745689", null));
-		conta.setNomeBanco(new InfBank("Banco itau", "10998765000170", "itauquervoce@itau.com", "rua da concordia"));
+		conta.setNome(new User("Ricardo Araujo", "10398745689", null));
+		conta.setNomeBanco(new InfBank("Banco Itau", "10998765000170", "itauquervoce@itau.com", "rua da concordia"));
 		conta.setNumConta(1234567);
 		conta.setSaldoConta(900.00);
-		conta.setTipoConta("corrente");
+		conta.setTipoConta("Corrente");
 		contaDao.inserir(conta);
 
 	}
