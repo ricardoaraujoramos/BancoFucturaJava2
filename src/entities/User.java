@@ -17,10 +17,13 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column
 	private int id_usuario;
+	
 	@Column
 	private String nome;
+	
 	@Column(name = "CNPJ", nullable = true, unique = true)
 	private String cnpj;
+	
 	@Column(name = "CPF", nullable = true, unique = true)
 	private String cpf;
 
